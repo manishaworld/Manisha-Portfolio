@@ -7,6 +7,26 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+        .hobby-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(0.625rem, 3vw, 1.25rem); align-items: stretch; }
+        .hobby-photo { margin: 0; min-width: 0; overflow: hidden; border: 1px solid #e5e7eb; border-radius: 0.75rem; background: #fff; box-shadow: 0 5px 18px rgba(17, 24, 39, 0.06); transition: box-shadow 0.2s ease; }
+        .hobby-photo a { display: block; }
+        .hobby-photo a:focus-visible { outline: 3px solid #2563eb; outline-offset: -3px; }
+        .hobby-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: contain; background: #f3f4f6; }
+        .hobby-photo figcaption { padding: 0.875rem 1rem; color: #4b5563; font-size: 0.875rem; line-height: 1.5; }
+        .hobby-gallery--coding img { aspect-ratio: 1; }
+        .hobby-photo--football img { aspect-ratio: 4 / 3; object-fit: cover; }
+        .hobby-photo--team img { object-position: center 77%; }
+        .hobby-photo--wide { grid-column: 1 / -1; }
+        .hobby-photo--wide img { aspect-ratio: 4 / 3; }
+        @media (hover: hover) {
+            .hobby-photo:hover { box-shadow: 0 8px 24px rgba(17, 24, 39, 0.1); }
+        }
+        @media (max-width: 540px) {
+            .hobby-photo figcaption { padding: 0.625rem; font-size: 0.75rem; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hobby-photo { transition: none; }
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -23,8 +43,8 @@
 
     <!-- Bio Header -->
     <header class="max-w-4xl mx-auto px-6 py-16 text-center border-b border-gray-200">
-        <h1 class="text-4xl font-extrabold text-gray-900 mb-4">My Story</h1>
-        <p class="text-xl text-gray-600">From Kathmandu to Busan: My journey into Software Engineering.</p>
+        <h1 class="text-4xl font-extrabold text-gray-900 mb-4">My Biography</h1>
+        <p class="text-xl text-gray-600">Driven by curiosity, shaped by experience, and always growing.</p>
     </header>
 
     <!-- Bio Content -->
@@ -50,7 +70,116 @@
             <p class="text-gray-600 leading-relaxed mb-4">
                 Eventually, I decided to step back from sports to focus entirely on my academic dreams. I wanted to pursue architecture, so I enrolled in the science faculty at Birendra Secondary School, a renowned government institution, where I completed my 12th grade (+2) with excellent grades.
             </p>
-            <!-- Placeholder for future photo -->
-            <div class="bg-gray-200 border-2 border-dashed border-gray-300 rounded-lg p-10 text-center text-gray-500 mb-4">
-                [ Sports / Medals Photo Placeholder - To be added later ]
+        </section>
+
+        <!-- Section 3: University Life -->
+        <section id="university-life" aria-labelledby="university-heading">
+            <h2 id="university-heading" class="text-2xl font-bold text-gray-900 mb-4">University Life in South Korea</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+                Coming to South Korea opened a new chapter in my life. As a Software Engineering student, I have enjoyed taking part in university activities and putting my skills into practice. One of my proudest achievements has been winning second prize in a university coding competition for two consecutive years. These experiences have helped me grow as a problem solver and given me more confidence in my abilities.
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-4">
+                University life has also brought plenty of fun days with friends. Alongside studying and coding, I enjoy joining campus activities, sharing new experiences, and making memories together. Those friendships have made life in a new country feel more like home.
+            </p>
+            <div class="hobby-gallery hobby-gallery--coding mt-6">
+                <figure class="hobby-photo">
+                    <a href="coding1.jpg" target="_blank" rel="noopener noreferrer" aria-label="View the coding award portrait at full size">
+                        <img src="coding1.jpg" alt="Holding a second-prize certificate and award sign after a university coding competition" width="3024" height="4032" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>A proud moment: second prize in a university coding competition.</figcaption>
+                </figure>
+                <figure class="hobby-photo">
+                    <a href="coding2.jpg" target="_blank" rel="noopener noreferrer" aria-label="View the coding competition group photo at full size">
+                        <img src="coding2.jpg" alt="Posing with fellow award recipients and university staff at the coding competition ceremony" width="4000" height="3000" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Celebrating the achievement together.</figcaption>
+                </figure>
             </div>
+        </section>
+
+        <!-- Section 4: Hobbies & Sports -->
+        <section aria-labelledby="hobbies-heading" class="border-t border-gray-200 pt-12">
+            <h2 id="hobbies-heading" class="text-2xl font-bold text-gray-900 mb-4">Beyond the Classroom</h2>
+            <p class="text-gray-600 leading-relaxed mb-10">
+                Dance, football, and running have all been part of my story. These are a few memories of the creativity, teamwork, and determination I carry with me beyond my studies.
+            </p>
+
+            <div class="space-y-12">
+                <section id="dancing" aria-labelledby="dancing-heading">
+                    <h3 id="dancing-heading" class="text-xl font-bold text-gray-900 mb-3">Dancing</h3>
+                    <p class="text-gray-600 leading-relaxed mb-5">
+                        Dancing has always been one of my favorite ways to express myself. I love the connection to my culture and the joy of sharing those moments with friends.
+                    </p>
+                    <div class="hobby-gallery">
+                        <figure class="hobby-photo">
+                            <a href="dancing1.jpg" target="_blank" rel="noopener noreferrer" aria-label="View original photo: A group of friends together in traditional Nepali dance outfits">
+                            <img src="dancing1.jpg" alt="A group of friends together in traditional Nepali dance outfits" width="918" height="1224" loading="lazy" decoding="async">
+                        </a>
+                            <figcaption>Dance memories with friends.</figcaption>
+                        </figure>
+                        <figure class="hobby-photo">
+                            <a href="dancing2.jpg" target="_blank" rel="noopener noreferrer" aria-label="View original photo: Two friends posing outdoors in traditional Nepali outfits">
+                            <img src="dancing2.jpg" alt="Two friends posing outdoors in traditional Nepali outfits" width="600" height="800" loading="lazy" decoding="async">
+                        </a>
+                            <figcaption>Celebrating culture through dance.</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section id="football" aria-labelledby="football-heading">
+                    <h3 id="football-heading" class="text-xl font-bold text-gray-900 mb-3">Football</h3>
+                    <p class="text-gray-600 leading-relaxed mb-5">
+                        Football was a big part of my school years. Playing in futsal tournaments taught me to trust my teammates, stay focused, and keep going. My team and tournament memories remain some of my favorites.
+                    </p>
+                    <div class="hobby-gallery">
+                        <figure class="hobby-photo hobby-photo--football">
+                            <a href="footballschool1.jpg" target="_blank" rel="noopener noreferrer" aria-label="View original photo: Holding a football trophy and medal on a school futsal court">
+                            <img src="footballschool1.jpg" alt="Holding a football trophy and medal on a school futsal court" width="1280" height="2772" loading="lazy" decoding="async">
+                        </a>
+                            <figcaption>A proud moment from my school football days.</figcaption>
+                        </figure>
+                        <figure class="hobby-photo hobby-photo--football hobby-photo--team">
+                            <a href="footballbachelor.jpg" target="_blank" rel="noopener noreferrer" aria-label="View original photo: A football team posing together on a field in front of a college building">
+                            <img src="footballbachelor.jpg" alt="A football team posing together on a field in front of a college building" width="1536" height="2048" loading="lazy" decoding="async">
+                        </a>
+                            <figcaption>Football with my team during my bachelor's studies.</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section id="running" aria-labelledby="running-heading">
+                    <h3 id="running-heading" class="text-xl font-bold text-gray-900 mb-3">Running</h3>
+                    <p class="text-gray-600 leading-relaxed mb-5">
+                        Running taught me patience and perseverance, one step at a time. From my first running award to district-level competitions, each experience gave me another reason to keep challenging myself.
+                    </p>
+                    <div class="hobby-gallery">
+                        <figure class="hobby-photo">
+                            <a href="firstrunningaward.jpg" target="_blank" rel="noopener noreferrer" aria-label="View original photo: Holding a trophy outdoors after a running competition">
+                            <img src="firstrunningaward.jpg" alt="Holding a trophy outdoors after a running competition" width="420" height="744" loading="lazy" decoding="async">
+                        </a>
+                            <figcaption>My first running award.</figcaption>
+                        </figure>
+                        <figure class="hobby-photo">
+                            <a href="sportsweekaward.jpg" target="_blank" rel="noopener noreferrer" aria-label="View original photo: Showing sports medals, certificates, and an award">
+                            <img src="sportsweekaward.jpg" alt="Showing sports medals, certificates, and an award" width="720" height="960" loading="lazy" decoding="async">
+                        </a>
+                            <figcaption>Medals and memories from sports week.</figcaption>
+                        </figure>
+                        <figure class="hobby-photo hobby-photo--wide">
+                            <a href="running.jpg" target="_blank" rel="noopener noreferrer" aria-label="View original photo: Receiving an award at an outdoor running prize ceremony">
+                            <img src="running.jpg" alt="Receiving an award at an outdoor running prize ceremony" width="1600" height="1200" loading="lazy" decoding="async">
+                        </a>
+                            <figcaption>A memorable award ceremony from my running journey.</figcaption>
+                        </figure>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="max-w-3xl mx-auto px-6 pb-10 text-center">
+        <a href="index.html" class="text-sm font-medium text-blue-600 hover:underline">&larr; Back to Home</a>
+    </footer>
+
+</body>
+</html>
