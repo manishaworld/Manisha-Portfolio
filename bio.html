@@ -4,54 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biography | Manisha Thapa</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
-        .hobby-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(0.625rem, 3vw, 1.25rem); align-items: stretch; }
-        .hobby-photo { margin: 0; min-width: 0; overflow: hidden; border: 1px solid #e5e7eb; border-radius: 0.75rem; background: #fff; box-shadow: 0 5px 18px rgba(17, 24, 39, 0.06); transition: box-shadow 0.2s ease; }
-        .hobby-photo a { display: block; }
-        .hobby-photo a:focus-visible { outline: 3px solid #2563eb; outline-offset: -3px; }
-        .hobby-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: contain; background: #f3f4f6; }
-        .hobby-photo figcaption { padding: 0.875rem 1rem; color: #4b5563; font-size: 0.875rem; line-height: 1.5; }
-        .hobby-gallery--coding img { aspect-ratio: 1; }
-        .hobby-photo--football img { aspect-ratio: 4 / 3; object-fit: cover; }
-        .hobby-photo--team img { object-position: center 77%; }
-        .hobby-photo--wide { grid-column: 1 / -1; }
-        .hobby-photo--wide img { aspect-ratio: 4 / 3; }
-        @media (hover: hover) {
-            .hobby-photo:hover { box-shadow: 0 8px 24px rgba(17, 24, 39, 0.1); }
-        }
-        @media (max-width: 540px) {
-            .hobby-photo figcaption { padding: 0.625rem; font-size: 0.75rem; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .hobby-photo { transition: none; }
-        }
-    </style>
+    <link rel="stylesheet" href="portfolio.css">
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="page-bio bg-gray-50 text-gray-800">
 
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm py-4 sticky top-0 z-50">
-        <div class="max-w-4xl mx-auto px-6 flex justify-between items-center">
-            <a href="index.html" class="font-bold text-xl tracking-tight text-gray-900">Manisha Thapa</a>
-            <div class="space-x-4 text-sm font-medium">
+    <nav class="site-nav bg-white shadow-sm py-4 sticky top-0 z-50">
+        <div class="nav-inner max-w-4xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="nav-brand font-bold text-xl tracking-tight text-gray-900">Manisha Thapa</a>
+            <div class="nav-links space-x-4 text-sm font-medium">
                 <a href="index.html" class="hover:text-blue-600 transition-colors">&larr; Back to Home</a>
             </div>
         </div>
     </nav>
 
     <!-- Bio Header -->
-    <header class="max-w-4xl mx-auto px-6 py-16 text-center border-b border-gray-200">
+    <header class="hero biography-hero max-w-4xl mx-auto px-6 py-16 text-center border-b border-gray-200">
         <h1 class="text-4xl font-extrabold text-gray-900 mb-4">My Biography</h1>
         <p class="text-xl text-gray-600">Driven by curiosity, shaped by experience, and always growing.</p>
     </header>
 
     <!-- Bio Content -->
-    <main class="max-w-3xl mx-auto px-6 py-12 space-y-12">
+    <main class="bio-content max-w-3xl mx-auto px-6 py-12 space-y-12">
         
         <!-- Section 1: Early Life & Education -->
-        <section>
+        <section class="bio-section">
             <h2 class="text-2xl font-bold text-gray-900 mb-4">Early Life in Nepal</h2>
             <p class="text-gray-600 leading-relaxed mb-4">
                 I was born in 2002 in Kathmandu, the capital city of Nepal. I started school at the age of four and quickly developed a love for learning. I was a dedicated student and consistently topped my class, passing my exams with high marks. While I was exceptionally talented in science from a young age, I initially struggled a bit with mathematics—but through hard work, I improved significantly and turned it into a strength.
@@ -62,7 +39,7 @@
         </section>
 
         <!-- Section 2: Sports & High School -->
-        <section>
+        <section class="bio-section">
             <h2 class="text-2xl font-bold text-gray-900 mb-4">Athletics & Academics</h2>
             <p class="text-gray-600 leading-relaxed mb-4">
                 During my school years, I was highly active in sports. I played football for about four years, competing in and winning various futsal tournaments. I also participated in district-level marathons, consistently securing top positions. My dedication to athletics earned me cash prizes and medals awarded by the sports minister.
@@ -73,7 +50,7 @@
         </section>
 
         <!-- Section 3: University Life -->
-        <section id="university-life" aria-labelledby="university-heading">
+        <section class="bio-section" id="university-life" aria-labelledby="university-heading">
             <h2 id="university-heading" class="text-2xl font-bold text-gray-900 mb-4">University Life in South Korea</h2>
             <p class="text-gray-600 leading-relaxed mb-4">
                 Coming to South Korea opened a new chapter in my life. As a Software Engineering student, I have enjoyed taking part in university activities and putting my skills into practice. One of my proudest achievements has been winning second prize in a university coding competition for two consecutive years. These experiences have helped me grow as a problem solver and given me more confidence in my abilities.
@@ -98,14 +75,14 @@
         </section>
 
         <!-- Section 4: Hobbies & Sports -->
-        <section aria-labelledby="hobbies-heading" class="border-t border-gray-200 pt-12">
+        <section aria-labelledby="hobbies-heading" class="bio-section hobbies-section border-t border-gray-200 pt-12">
             <h2 id="hobbies-heading" class="text-2xl font-bold text-gray-900 mb-4">Beyond the Classroom</h2>
             <p class="text-gray-600 leading-relaxed mb-10">
                 Dance, football, and running have all been part of my story. These are a few memories of the creativity, teamwork, and determination I carry with me beyond my studies.
             </p>
 
             <div class="space-y-12">
-                <section id="dancing" aria-labelledby="dancing-heading">
+                <section class="hobby-section" id="dancing" aria-labelledby="dancing-heading">
                     <h3 id="dancing-heading" class="text-xl font-bold text-gray-900 mb-3">Dancing</h3>
                     <p class="text-gray-600 leading-relaxed mb-5">
                         Dancing has always been one of my favorite ways to express myself. I love the connection to my culture and the joy of sharing those moments with friends.
@@ -126,7 +103,7 @@
                     </div>
                 </section>
 
-                <section id="football" aria-labelledby="football-heading">
+                <section class="hobby-section" id="football" aria-labelledby="football-heading">
                     <h3 id="football-heading" class="text-xl font-bold text-gray-900 mb-3">Football</h3>
                     <p class="text-gray-600 leading-relaxed mb-5">
                         Football was a big part of my school years. Playing in futsal tournaments taught me to trust my teammates, stay focused, and keep going. My team and tournament memories remain some of my favorites.
@@ -147,7 +124,7 @@
                     </div>
                 </section>
 
-                <section id="running" aria-labelledby="running-heading">
+                <section class="hobby-section" id="running" aria-labelledby="running-heading">
                     <h3 id="running-heading" class="text-xl font-bold text-gray-900 mb-3">Running</h3>
                     <p class="text-gray-600 leading-relaxed mb-5">
                         Running taught me patience and perseverance, one step at a time. From my first running award to district-level competitions, each experience gave me another reason to keep challenging myself.
@@ -177,7 +154,7 @@
         </section>
     </main>
 
-    <footer class="max-w-3xl mx-auto px-6 pb-10 text-center">
+    <footer class="bio-footer max-w-3xl mx-auto px-6 pb-10 text-center">
         <a href="index.html" class="text-sm font-medium text-blue-600 hover:underline">&larr; Back to Home</a>
     </footer>
 
