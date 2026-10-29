@@ -1,18 +1,19 @@
 (() => {
     const links = Array.from(document.querySelectorAll('.sidebar-nav a'));
     const localLinks = links.filter(link => link.getAttribute('href').startsWith('#'));
-    const sections = localLinks.map(link => document.getElementById(link.hash.slice(1)));
+    const sections = Array.from(document.querySelectorAll('#main-content > section[id], #main-content > header[id]'));
     let pending = false;
 
     function updateNavigation() {
-        let active = 0;
+        let activeSection = sections[0];
         const marker = Math.min(window.innerHeight * 0.3, 220);
-        sections.forEach((section, index) => {
-            if (section && section.getBoundingClientRect().top <= marker) active = index;
+        sections.forEach(section => {
+            if (section.getBoundingClientRect().top <= marker) activeSection = section;
         });
-        localLinks.forEach((link, index) => {
-            link.classList.toggle('is-active', index === active);
-            if (index === active) link.setAttribute('aria-current', 'location');
+        localLinks.forEach(link => {
+            const isActive = activeSection && link.hash === `#${activeSection.id}`;
+            link.classList.toggle('is-active', Boolean(isActive));
+            if (isActive) link.setAttribute('aria-current', 'location');
             else link.removeAttribute('aria-current');
         });
         pending = false;

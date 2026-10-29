@@ -12,7 +12,7 @@
 </head>
 <body class="page-home">
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <div class="portfolio-layout">
+    <div class="portfolio-layout" id="top">
         <aside class="sidebar" aria-label="Profile and navigation">
             <div class="sidebar-top">
                 <div class="identity">
@@ -23,8 +23,6 @@
                 <nav class="sidebar-nav" aria-label="Main navigation">
                     <a href="#about" class="is-active" aria-current="location"><span>About</span></a>
                     <a href="#skills"><span>Skills</span></a>
-                    <a href="#projects"><span>Projects</span></a>
-                    <a href="bio.html"><span>Biography</span></a>
                     <a href="#contact"><span>Contact</span></a>
                 </nav>
             </div>
@@ -39,9 +37,6 @@
                     <p class="intro-copy"><strong>Hi there! I'm Manisha, a software engineering student and creator who loves building digital experiences.</strong></p>
                     <p class="intro-copy">I'm currently in my fifth semester pursuing a software engineering degree at Dong-Eui University in South Korea, while gaining hands-on industry experience working at a design company. I enjoy working at the intersection of development and creativity—specializing in web development, web design, and bringing concepts to life through animation and AI-generated videos.</p>
                     <p class="intro-copy">When I'm not writing code or building digital projects, you can usually find me playing badminton or football, hanging out with friends and dogs, or relaxing at a local cat cafe.</p>
-                    <div class="about-links">
-                        <a class="inline-link" href="bio.html">Read My Biography <span aria-hidden="true">&#8599;</span></a>
-                    </div>
                 </section>
 
                 <section class="content-section" id="skills" aria-labelledby="skills-heading">
@@ -74,41 +69,39 @@
                     </article>
                     </div>
                     <div class="profile-facts" aria-label="At a glance">
-                        <div><span>Software Eng.</span><p>B.S.</p></div>
-                        <div><span>Core Projects</span><p>2+</p></div>
+                        <div><span>Software Eng.</span><p>B.S. in progress</p></div>
+                        <div><span>Featured Projects</span><p>2</p></div>
                         <div><span>Global Mindset</span><p>Bilingual</p></div>
                         <div><span>Based In</span><p>Busan, KR</p></div>
-                    </div>
-                    <div class="section-end-link">
-                        <a class="inline-link" href="#projects">View Projects <span aria-hidden="true">&#8595;</span></a>
                     </div>
                 </section>
 
                 <section class="content-section" id="projects" aria-labelledby="projects-heading">
                     <p class="eyebrow">Portfolio</p>
                     <h2 class="section-label" id="projects-heading">Featured Projects</h2>
-                    <p class="section-description">Demonstrated applications highlighting database modeling, API architecture, and interactive design.</p>
+                    <p class="section-description">A C++ reservation system and the website behind this portfolio.</p>
                     <div class="project-list">
                     <article class="project-row">
-                        <div class="project-preview" aria-hidden="true"><svg viewBox="0 0 80 72" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 25 28-14 28 14-28 14-28-14Z"/><path d="M19 29v24m14-17v17m14-17v17m14-24v24M13 57h54M9 63h62"/></svg></div>
+                        <div class="project-preview" aria-hidden="true"><svg viewBox="0 0 80 72" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="23" y="9" width="34" height="54" rx="3"/><path d="M17 63h46M29 19h7v7h-7zm15 0h7v7h-7zM29 33h7v7h-7zm15 0h7v7h-7zM35 63V49h10v14"/></svg></div>
                         <div class="project-body">
-                            <p class="project-category">Course Architecture</p>
-                            <h3>University Management System</h3>
-                            <p>A centralized web application developed to handle student record tracking, course catalog administration, and automated grade evaluations with role-based access control.</p>
-                            <div class="tags"><span>Java</span><span>Spring Boot</span><span>MySQL</span></div>
-                            <a class="inline-link project-link" href="https://github.com/manishaworld" target="_blank" rel="noopener noreferrer">GitHub Profile <span aria-hidden="true">&#8599;</span></a>
+                            <p class="project-category">OOP II &middot; Course Project</p>
+                            <h3><a href="https://github.com/manishaworld/Hotel-Reservation-Manager" target="_blank" rel="noopener noreferrer">Hotel Reservation Manager <span aria-hidden="true">&#8599;</span></a></h3>
+                            <p>A C++ command-line application for managing hotel rooms, guests, reservations, and simulated payments. Built for OOP II, it demonstrates inheritance, polymorphism, input validation, and persistent storage using text files.</p>
+                            <div class="tags"><span>C++</span><span>OOP</span><span>File Handling</span></div>
                         </div>
                     </article>
                     <article class="project-row">
-                        <div class="project-preview" aria-hidden="true"><svg viewBox="0 0 80 72" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="31" cy="26" r="10"/><path d="M31 8v-4m0 44v-4M13 26H9m44 0h-4M18 13l-3-3m32 32-3-3M44 13l3-3M18 39l-3 3"/><path d="M31 61a11 11 0 0 1 0-22 15 15 0 0 1 29-1 11 11 0 1 1 2 23H31Z"/></svg></div>
+                        <div class="project-preview" aria-hidden="true"><svg viewBox="0 0 80 72" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="14" width="62" height="44" rx="3"/><path d="M9 25h62M16 19h1m5 0h1m5 0h1M19 34h15m-15 6h23m-23 6h18M51 34l-5 6 5 6m8-12 5 6-5 6"/></svg></div>
                         <div class="project-body">
-                            <p class="project-category">Web App</p>
-                            <h3>Dynamic Weather Dashboard</h3>
-                            <p>Real-time client-side application querying third-party meteorological REST APIs. Features dynamic city searching, unit conversion, and 5-day predictive forecasts.</p>
-                            <div class="tags"><span>JavaScript (ES6+)</span><span>RESTful APIs</span><span>Tailwind CSS</span></div>
-                            <a class="inline-link project-link" href="https://github.com/manishaworld" target="_blank" rel="noopener noreferrer">GitHub Profile <span aria-hidden="true">&#8599;</span></a>
+                            <p class="project-category">Personal Website</p>
+                            <h3><a href="https://github.com/manishaworld/Manisha-Portfolio" target="_blank" rel="noopener noreferrer">Manisha Portfolio <span aria-hidden="true">&#8599;</span></a></h3>
+                            <p>My personal portfolio, built with HTML, CSS, and JavaScript to present my background, projects, and biography. It brings together responsive layouts, accessible navigation, and photo galleries of university life and extracurricular activities.</p>
+                            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
                         </div>
                     </article>
+                    </div>
+                    <div class="section-end-link">
+                        <a class="inline-link" href="https://github.com/manishaworld?tab=repositories" target="_blank" rel="noopener noreferrer">View all repositories <span aria-hidden="true">&#8599;</span></a>
                     </div>
                 </section>
 
@@ -124,10 +117,22 @@
                 </section>
             </main>
         <footer class="site-footer">
+            <p class="footer-label">Explore more</p>
+            <nav class="footer-destinations" aria-label="Explore the portfolio">
+                <a class="destination-link" href="#projects">
+                    <span class="destination-title">Projects</span>
+                    <span class="destination-arrow" aria-hidden="true">&#8593;</span>
+                    <span class="destination-description">A selection of my development work.</span>
+                </a>
+                <a class="destination-link" href="bio.html">
+                    <span class="destination-title">My Biography</span>
+                    <span class="destination-arrow" aria-hidden="true">&#8594;</span>
+                    <span class="destination-description">Education, achievements, and interests.</span>
+                </a>
+            </nav>
             <nav class="footer-nav" aria-label="Footer navigation">
-                <a href="index.html">Home <span aria-hidden="true">&#8599;</span></a>
-                <a href="bio.html">Biography <span aria-hidden="true">&#8599;</span></a>
-                <a href="index.html#contact">Contact <span aria-hidden="true">&#8599;</span></a>
+                <a href="#contact">Contact</a>
+                <a href="#top">Back to top <span aria-hidden="true">&#8593;</span></a>
             </nav>
             <p>Aspiring Software Engineer &bull; Busan, South Korea</p>
             <p>&copy; 2026 Manisha Thapa. All rights reserved.</p>

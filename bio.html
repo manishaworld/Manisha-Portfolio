@@ -12,7 +12,7 @@
 </head>
 <body class="page-bio">
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <div class="portfolio-layout">
+    <div class="portfolio-layout" id="top">
         <aside class="sidebar" aria-label="Profile and navigation">
             <div class="sidebar-top">
                 <div class="identity">
@@ -169,10 +169,22 @@
 
             </main>
         <footer class="site-footer">
+            <p class="footer-label">Explore more</p>
+            <nav class="footer-destinations" aria-label="Explore the portfolio">
+                <a class="destination-link" href="index.html">
+                    <span class="destination-title">My Portfolio</span>
+                    <span class="destination-arrow" aria-hidden="true">&#8594;</span>
+                    <span class="destination-description">An introduction to my work and skills.</span>
+                </a>
+                <a class="destination-link" href="index.html#projects">
+                    <span class="destination-title">Projects</span>
+                    <span class="destination-arrow" aria-hidden="true">&#8594;</span>
+                    <span class="destination-description">A selection of my development work.</span>
+                </a>
+            </nav>
             <nav class="footer-nav" aria-label="Footer navigation">
-                <a href="index.html">Home <span aria-hidden="true">&#8599;</span></a>
-                <a href="bio.html">Biography <span aria-hidden="true">&#8599;</span></a>
-                <a href="index.html#contact">Contact <span aria-hidden="true">&#8599;</span></a>
+                <a href="index.html#contact">Contact</a>
+                <a href="#top">Back to top <span aria-hidden="true">&#8593;</span></a>
             </nav>
             <p>Aspiring Software Engineer &bull; Busan, South Korea</p>
             <p>&copy; 2026 Manisha Thapa. All rights reserved.</p>
